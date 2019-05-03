@@ -1,0 +1,284 @@
+body {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin-left: 350px;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 350px);
+}
+
+.mapboxgl-popup-content {
+  background: #333;
+  color: #efefef;
+  font: 1.1em -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  padding: 8px;
+  text-align: center;
+}
+
+.mapboxgl-popup-content p:first-child {
+  margin-bottom: 5px;
+}
+
+.mapboxgl-popup-content p:last-child {
+  margin: 0;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  border-bottom-color: #333;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+    border-top-color: #333;
+}
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: #333;
+}
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: #333;
+}
+
+.map-overlay {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  font-size: small;
+  overflow: auto;
+  padding: 10px;
+  position: absolute;
+}
+
+.map-overlay .filter-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.map-overlay.bottom-right {
+  bottom: 0;
+  margin: 0 10px 40px 0;
+  right: 0;
+}
+
+.map-overlay.bottom-left {
+  bottom: 0;
+  left: 350px;
+  margin: 0 0 40px 10px;
+}
+
+/* .map-overlay.top-right {
+  margin: 10px 10px 0 0;
+  right: 0;
+  top: 110px;
+  right: 40px;
+  top: 0;
+} */
+
+#legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#legend li {
+  float: left;
+  text-align: center;
+}
+
+#legend li span {
+  display: block;
+  height: 15px;
+  width: 60px;
+}
+
+.legend-block {
+  margin-bottom: 5px;
+}
+
+.info-panel {
+  background: #efefef;
+  border-right: 1px solid #fff;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  text-align: center;
+  width: 349px;
+}
+
+.info-panel-title {
+  padding: 15px 0
+}
+
+.info-panel-content {
+  padding: 15px 0 10px;
+}
+
+.info-panel-title a,
+.info-panel-content a {
+  color: #333;
+}
+
+.fa-question-circle {
+  /* cursor: help; */
+  font-size: small;
+  /* vertical-align: top; */
+}
+
+figcaption a {
+  color: #333;
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 #3b88fd;
+}
+figcaption a:hover,
+figcaption a:focus {
+  color: #3b88fd;
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 #3b88fd;
+}
+
+.info-panel-local,
+.info-panel-us {
+  padding: 10px 0;
+}
+
+.info-panel-title,
+.info-panel-content,
+.info-panel-local {
+  border-bottom: 1px solid #fff;
+}
+
+.info-panel-title p,
+.info-panel-local p,
+.info-panel-us p {
+  font-size: small;
+}
+
+.info-panel-local p,
+.info-panel-us p {
+  /* margin: 0 0 6px; */
+}
+
+.info-panel-local p.local-city {
+  font-size: x-small;
+  margin: 3px 0 5px;
+}
+
+.info-panel-title h3,
+.info-panel-us h3:first-child,
+.info-panel-filter h3:first-child {
+  margin: 0 0 10px;
+}
+
+.info-panel-title p {
+  margin: 0;
+}
+
+.info-panel-content {
+  height: 278px;
+}
+
+.info-panel-content h1 {
+  color: #fff;
+  display: inline-block;
+  margin-block-end: 10px;
+  margin-block-start: 0;
+}
+
+.info-panel-content h2 {
+  background: #333;
+  color: #efefef;
+  display: inline-block;
+  margin: 0;
+}
+
+.info-panel-content h3:last-child {
+  margin: 0;
+}
+
+.info-panel-local {
+  height: 118px;
+}
+
+.info-panel-local h3 {
+  margin: 0;
+}
+
+.info-panel-local p:last-child,
+.info-panel-us p:last-child {
+  margin: 0;
+}
+
+.region-checkbox {
+  margin-bottom: 3px;
+}
+
+.region-checkbox:last-child {
+  margin: 0;
+}
+
+/* Unopened lightbox */
+.lightbox {
+  display: none;
+}
+
+.lightbox figure {
+  margin: 0;
+}
+
+/* Opened lightbox */
+.lightbox:target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lightbox content */
+.lightbox figcaption {
+  /* width: 100%; */
+  position: relative;
+  padding: 5px 10px 15px;
+  background-color: #efefef;
+}
+
+.lightbox figcaption p {
+  font-size: small;
+}
+
+/* Lightbox overlay */
+.lightbox .close::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(51, 51, 51, 0.8);
+  content: "";
+  cursor: default;
+}
