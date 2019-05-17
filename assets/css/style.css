@@ -179,8 +179,8 @@ figcaption a:focus {
 .info-panel-content h2 {
   background: #333;
   color: #efefef;
-  display: inline-block;
-  margin: 0;
+  /* display: inline-block; */
+  margin: 123px 0 0;
 }
 
 .info-panel-content h3:last-child {
@@ -191,8 +191,7 @@ figcaption a:focus {
   height: 118px;
 }
 
-.info-panel-local,
-.info-panel-us {
+.info-panel-local {
   padding: 10px 0;
 }
 
@@ -208,6 +207,10 @@ figcaption a:focus {
 .info-panel-local p:last-child,
 .info-panel-us p:last-child {
   margin: 0;
+}
+
+.info-panel-us {
+  padding: 10px 0 15px;
 }
 
 .region-checkbox {
@@ -241,14 +244,36 @@ figcaption a:focus {
 
 /* Lightbox content */
 .lightbox figcaption {
-  /* width: 100%; */
   position: relative;
   padding: 5px 10px 15px;
-  background-color: #efefef;
+  background: #efefef;
 }
 
 .lightbox figcaption p {
   font-size: small;
+}
+
+/* Close button */
+.lightbox .close {
+  position: relative;
+  display: block;
+}
+
+.lightbox .close::after {
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background: #e3e3e3;
+  color: #333;
+  content: "×";
+  cursor: pointer;
+  font-size: large;
 }
 
 /* Lightbox overlay */
@@ -258,7 +283,7 @@ figcaption a:focus {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(51, 51, 51, 0.8);
+  background: rgba(51, 51, 51, 0.8);
   content: "";
   cursor: default;
 }

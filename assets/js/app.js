@@ -110,15 +110,15 @@ map.on('load', function () {
   infoLightBoxFigureAnchor.className = 'close';
   var infoLightBoxFigureCaption = document.createElement('figcaption');
   infoLightBoxFigureCaption.innerHTML = '<h3>About</h3>' +
-  '<p>Created by: <a href="https://chadlawlis.com">Chad Lawlis</a></p>' +
-  '<p>The ideation behind this map was inspired by <a href="https://www.nytimes.com/2019/03/14/realestate/how-much-do-you-need-to-make.html" target="_blank">this</a> article, of the same name, from the New York Times, based on a <a href="https://www.hsh.com/finance/mortgage/salary-home-buying-25-cities.html" target="_blank">study</a> from HSH.com.</p>' +
+  '<p>Created by <a href="https://chadlawlis.com" target="_blank">Chad Lawlis</a>.</p>' +
+  '<p>This map was inspired by an <a href="https://www.nytimes.com/2019/03/14/realestate/how-much-do-you-need-to-make.html" target="_blank">article</a> from the New York Times, based on a <a href="https://www.hsh.com/finance/mortgage/salary-home-buying-25-cities.html" target="_blank">study</a> from HSH.com.</p>' +
   '<h3>Data</h3>' +
   '<p><b>Median home price</b> is the sales prices of existing single-family homes, by <a href="https://www.census.gov/programs-surveys/metro-micro.html" target="_blank">Census metropolitan statistical area</a>, from the National Association of Realtors (NAR) <a href="https://www.nar.realtor/sites/default/files/documents/metro-home-prices-q4-2018-single-family-2019-02-12.pdf" target="_blank">fourth-quarter 2018</a>.</p>' +
-  '<p><b>Monthly payment</b> is calculated using the expected base costs, as described by HSH.com <a href="https://www.hsh.com/finance/mortgage/salary-home-buying-25-cities.html#how-did-we-come-up-with-these-salaries" target="_blank">here</a>, after a 20% down payment with a 30-year fixed mortgage.</p>' +
+  '<p><b>Monthly payment</b> is calculated using the expected base costs, as described by <a href="https://www.hsh.com/finance/mortgage/salary-home-buying-25-cities.html#how-did-we-come-up-with-these-salaries" target="_blank">HSH.com</a>, after a 20% down payment with a 30-year fixed mortgage.</p>' +
   '<p><b>Salary</b> is then calculated as the annual pre-tax income required to cover these monthly payments.</p>' +
-  '<p><b>Affordability Index</b> ranges 1-5, with 1 most affordable and 5 most expensive. It is a custom calculation, inspired by <a href="https://www.kiplinger.com/tool/real-estate/T010-S003-home-prices-in-100-top-u-s-metro-areas/index.php" target="_blank">this</a> report from Kiplinger, using <a href="https://www.sapling.com/5114529/calculate-affordability" target="_blank">this</a> formula from Sapling.</p>' +
+  '<p><b>Affordability Index</b> ranges 1-5, with 1 most affordable and 5 most expensive. It is a custom calculation, inspired by a <a href="https://www.kiplinger.com/tool/real-estate/T010-S003-home-prices-in-100-top-u-s-metro-areas/index.php" target="_blank">report</a> from Kiplinger, using a <a href="https://www.sapling.com/5114529/calculate-affordability" target="_blank">formula</a> from Sapling.</p>' +
   '<p>All other data is either directly or derived from latest available Census data: 2017 ACS 5-year profile for median income and median monthly rent, Vintage 2018 population estimates for total population (from which population density is derived).</p>' +
-  '<p>Final map data is available <a href="" target="_blank">here</a>.</p>';
+  '<p>Final map data is available <a href="https://github.com/chadlawlis/affordability/blob/master/assets/data/top50.geojson" target="_blank">here</a>.</p>';
 
   infoLightBoxFigure.appendChild(infoLightBoxFigureAnchor);
   infoLightBoxFigure.appendChild(infoLightBoxFigureCaption);
@@ -133,7 +133,7 @@ map.on('load', function () {
 
   var infoPanelContent = document.createElement('div');
   infoPanelContent.className = 'info-panel-content';
-  infoPanelContent.innerHTML = '<h2>Click a city to explore!</h2>';
+  infoPanelContent.innerHTML = '<h2>Click a city to explore</h2>';
   infoPanel.appendChild(infoPanelContent);
 
   var infoPanelLocal = document.createElement('div');
