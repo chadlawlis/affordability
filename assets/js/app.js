@@ -1,5 +1,4 @@
-/* global mapboxgl */
-/* global d3 */
+/* global mapboxgl, d3 */
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhZGxhd2xpcyIsImEiOiJlaERjUmxzIn0.P6X84vnEfttg0TZ7RihW1g';
 
@@ -17,7 +16,7 @@ map.fitBounds(usBounds);
 
 map.on('load', function () {
   // Add zoom and rotation controls to the map.
-  map.addControl(new mapboxgl.NavigationControl({showCompass: false}));
+  map.addControl(new mapboxgl.NavigationControl({ showCompass: false }));
 
   // Create custom "zoom to US" control class
   // https://docs.mapbox.com/mapbox-gl-js/api/#icontrol
@@ -30,6 +29,7 @@ map.on('load', function () {
       this._container.appendChild(document.createElement('button'));
       return this._container;
     }
+
     onRemove () {
       this._container.parentNode.removeChild(this._container);
       this._map = undefined;
@@ -149,7 +149,7 @@ map.on('load', function () {
   d3.json('assets/data/top50.geojson').then(function (data) {
     // log feature properties
     // console.log(data.features[1].properties);
-    // console.log(data.features[1].properties['region_name']);
+    // console.log(data.features[1].properties.region_name);
 
     var layers = map.getStyle().layers;
 
@@ -177,23 +177,23 @@ map.on('load', function () {
     }
 
     map.addSource('top50', {
-      'type': 'geojson',
-      'data': data
+      type: 'geojson',
+      data: data
     });
 
     data.features.forEach(function (feature) {
       // Only iterate through features with "region" value (excludes "National" record with null value)
-      if (feature.properties['region']) {
-        var regionName = feature.properties['region_name'];
+      if (feature.properties.region) {
+        var regionName = feature.properties.region_name;
         var layerId = regionName;
 
         // Add layer to the map if it hasn't been added already
         if (!map.getLayer(layerId)) {
           map.addLayer({
-            'id': layerId,
-            'type': 'fill',
-            'source': 'top50',
-            'paint': {
+            id: layerId,
+            type: 'fill',
+            source: 'top50',
+            paint: {
               'fill-color': [
                 'step',
                 ['get', 'salary'],
@@ -207,7 +207,7 @@ map.on('load', function () {
               ],
               'fill-opacity': 1
             },
-            'filter': ['==', 'region_name', regionName]
+            filter: ['==', 'region_name', regionName]
           }, firstLandUseId); // place each fill layer before first symbol layer, so symbol layers rendered on top of fill
 
           // log layers after adding layers (all layers should appear above first layer with type = 'symbol')
