@@ -46,7 +46,6 @@ map.on('load', function () {
   var usaButton = usaControl.firstElementChild;
   usaButton.id = 'usa';
   usaButton.title = 'Zoom to US';
-  usaButton.innerHTML = '<img width="20" height="20" src="assets/img/usa.svg">';
   usaButton.addEventListener('click', function () {
     map.fitBounds(usBounds);
   });

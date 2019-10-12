@@ -287,3 +287,10 @@ figcaption a:focus {
   content: "";
   cursor: default;
 }
+
+.usa-control {
+  background-image: url(../img/usa.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+}
