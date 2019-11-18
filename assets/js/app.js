@@ -97,6 +97,7 @@ map.on('load', function () {
 
   // Create information panel elements
   var infoPanel = document.getElementById('info-panel');
+  infoPanel.className = 'info-panel';
 
   // Create lightbox for "about" modal
   // https://developer.mozilla.org/en-US/docs/Web/CSS/:target
