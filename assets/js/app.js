@@ -106,7 +106,7 @@ map.on('load', function () {
   infoLightBox.className = 'lightbox';
   var infoLightBoxFigure = document.createElement('figure');
   var infoLightBoxFigureAnchor = document.createElement('a');
-  infoLightBoxFigureAnchor.setAttribute('href', '#');
+  infoLightBoxFigureAnchor.href = '#';
   infoLightBoxFigureAnchor.className = 'close';
   var infoLightBoxFigureCaption = document.createElement('figcaption');
   infoLightBoxFigureCaption.innerHTML = '<h3>About</h3>' +
